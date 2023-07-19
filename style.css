@@ -1,0 +1,120 @@
+body{
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+}
+form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#searchInput{
+    width:60%;
+    max-width: 400px;
+    padding:10px 20px;
+    border:none;
+    box-shadow: 0 0 5px grey ;
+    border-radius: 5px;
+    font-size:18px ;
+}
+#searchButton{
+    padding:10px 20px;
+    background-color: rgb(5, 5, 245);
+    color:white;
+    border:none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: box-shadow .3s ease;
+    transition: background-color .3s ease;
+    margin-left: 10px;
+    
+}
+#searchButton:hover{
+    background-color: darkblue;
+    box-shadow:0 0 5px rgb(32, 32, 116);
+}
+.searchResults{
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.searchResultSingular{
+margin-bottom: 60px;
+width:30%;
+border-radius: 5px;
+box-shadow: 0 0 5px rgb(109, 108, 108);
+overflow: hidden;
+}
+.searchResultSingular:hover img{
+    transform: scale(1.05);
+}
+
+.searchResultSingular img{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+.searchResultSingular a{
+    padding: 10px;
+    display: block;
+    color:#333;
+    text-decoration: none;
+    transition:background-color .3s ease-in-out ;
+}
+.searchResultSingular:hover a{
+    background-color: rgb(201, 198, 198);
+}
+#showMoreButton{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding:10px 20px;
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+    font-size: 18px;
+    box-shadow: 0 0 5px darkblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:background-color .3s ease-in-out ;
+    display: none;
+}
+#showMoreButton:hover{
+    background-color: darkblue;
+}
+@media screen and (max-width:768px) {
+    .searchResultSingular{
+        width: 45%;
+        
+    }
+}
+@media screen and (max-width:480px) {
+    .searchResultSingular{
+        width: 100%;
+        
+    }
+    form{
+        flex-direction: column;
+
+    }
+    #searchInput{
+        margin-bottom: 20px;
+        width:85%;
+    }
+}
